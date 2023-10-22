@@ -25,4 +25,15 @@ export class CartPageComponent implements OnInit {
       this.service
     ).toFixed(2);
   }
+
+  removeFromCard(index: number) {
+    this.cart.splice(index, 1);
+    this.sum = +this.CS.calcSum().toFixed(2);
+    this.discount = this.CS.setDiscount(this.sum, this.discount);
+    this.total = +this.CS.calcTotal(
+      this.sum,
+      this.discount,
+      this.service
+    ).toFixed(2);
+  }
 }
