@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+
+.primary {
+  font-size: clamp(1.5rem, 0.6304rem + 4.3478vw, 4rem);
+  font-family: "Great Vibes", cursive;
+}
+
+.primary-light {
+  @extend .primary;
+  color: #fff;
+}
+
+.resp-text {
+  font-size: clamp(0.75rem, 0.4891rem + 1.3043vw, 1.5rem);
+}
+
+.resp-text-light {
+  @extend .resp-text;
+  color: #fff;
+}
+
+.cont {
+  width: clamp(450px - 1rem, 75%, 1200px);
+  margin: 2rem auto;
+}
+
+.mt-6 {
+  margin-top: 7rem;
+}
