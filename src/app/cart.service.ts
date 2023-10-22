@@ -6,8 +6,6 @@ import { Iproducts } from './Iproducts';
 })
 export class CartService {
   cart: Iproducts[] = [];
-  // discount: number = 0;
-  // total: number = 0;
 
   constructor() {}
 
