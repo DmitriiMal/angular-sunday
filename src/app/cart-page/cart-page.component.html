@@ -4,21 +4,23 @@
   <div class="row row-cols-1 row-cols-lg-3">
     <div class="col-lg-8">
       <div class="card mt-4">
-        <div class="card-header fw-bold">Cart - 0 Item(s)</div>
+        <div class="card-header fw-bold">Cart - {{ cart.length }} Item(s)</div>
 
         <!-- Dynamic cart item starts -->
         <div *ngFor="let item of cart" class="m-3 pb-3 border-bottom">
           <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
             <img
               class="col-sm-4 col-md-3 object-fit-cover mb-3 mb-sm-0"
-              src="..."
+              src="{{ item.image }}"
               alt="img"
             />
             <div class="col-sm-4 col-md-6">
-              <p class="fw-bold">name</p>
-              <p class="d-none d-sm-inline">description</p>
+              <p class="fw-bold">{{ item.name }}</p>
+              <p class="d-none d-sm-inline">{{ item.description }}</p>
             </div>
-            <p class="col-sm-4 col-md-3 fw-bold">Price: &euro; price</p>
+            <p class="col-sm-4 col-md-3 fw-bold">
+              Price: &euro; {{ item.price }}
+            </p>
           </div>
         </div>
         <!-- Dynamic cart item ends -->
