@@ -7,7 +7,7 @@
         <div class="card-header fw-bold">Cart - 0 Item(s)</div>
 
         <!-- Dynamic cart item starts -->
-        <div class="m-3 pb-3 border-bottom">
+        <div *ngFor="let item of cart" class="m-3 pb-3 border-bottom">
           <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
             <img
               class="col-sm-4 col-md-3 object-fit-cover mb-3 mb-sm-0"
@@ -38,14 +38,14 @@
               <p>Discount</p>
             </div>
             <div class="text-end">
-              <!-- <p>&euro; {{ sum }}</p> -->
-              <p>&euro; 3.10</p>
-              <!-- <p>{{ discount }} %</p> -->
+              <p>&euro; {{ sum }}</p>
+              <p>&euro; {{ service }}</p>
+              <p>{{ discount }} %</p>
             </div>
           </div>
-          <!-- <p *ngIf="discount == 0" class="text-danger m-0 fw-lighter">
+          <p *ngIf="discount == 0" class="text-danger m-0 fw-lighter">
             Order over &euro;40 and get your discount
-          </p> -->
+          </p>
         </div>
         <div class="m-3">
           <div
@@ -53,7 +53,7 @@
           >
             <p>Total amount <br />(including VAT)</p>
             <div class="text-end">
-              <p>&euro; 000</p>
+              <p>&euro; {{ total }}</p>
             </div>
           </div>
         </div>
