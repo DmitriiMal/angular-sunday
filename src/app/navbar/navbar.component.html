@@ -150,7 +150,15 @@
           <a class="nav-link" routerLink="/menu">Menu</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/cart">Cart</a>
+          <a class="nav-link position-relative" routerLink="/cart"
+            >Cart<span
+              *ngIf="cart.length !== 0"
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+            >
+              {{ cart.length }}
+              <span class="visually-hidden">unread messages</span>
+            </span></a
+          >
         </li>
       </ul>
     </div>
